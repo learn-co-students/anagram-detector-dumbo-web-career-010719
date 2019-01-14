@@ -1,4 +1,5 @@
 # Your code goes here!
+require 'pry'
 
 class Anagram
   attr_accessor :word
@@ -7,13 +8,14 @@ class Anagram
     @word = word
   end
   
-  def match(words)
-    anag = %w(words)
-    anag_words = []
-    anag.each do |word|
-      anag_words.ush(word.reverse)
+  def match(array)
+    # array.select do |word|
+    #   if word.split('').sort == @word.split('').sort
+    #   end
+    
+    array.select do |word|
+      word.split("").sort == @word.split("").sort
     end
-    anag_words
   end
   
 end
